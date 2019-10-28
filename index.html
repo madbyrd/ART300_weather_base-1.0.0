@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Weather</title>
+
+        <script src="/js/libraries/vue.min.js"></script>
+        <script src="keys.js"></script>
+        <script src="/js/moon.js"></script>
+
+        <link rel="stylesheet" href="/js/libraries/leaflet/leaflet.css" />
+        <link rel="stylesheet" href="/js/libraries/leaflet/leaflet-openweathermap.css" />
+        <link rel="stylesheet" href="/js/libraries/leaflet/leaflet-languageselector.css" />
+
+        <script src="/js/libraries/leaflet/leaflet.js"></script>
+        <script src="/js/libraries/leaflet/Permalink.js"></script>
+        <script src="/js/libraries/leaflet/Permalink.Layer.js"></script>
+        <script src="/js/libraries/leaflet/Permalink.Overlay.js"></script>
+        <script src="/js/libraries/leaflet/leaflet-openweathermap.js"></script>
+        <script src="/js/libraries/leaflet/leaflet-languageselector.js"></script>
+
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <body>
+
+
+
+        <input placeholder="search: zip code" name="name" id="zip" />
+        <p id="zip_display"></p>
+
+        <div class="current">
+            <div class="seattle">SEATTLE, WASHINGTON</div>
+            <div class="today">TODAY'S DETAILS</div>
+        </div>
+
+        <div class="temp">
+            <div class="left">71°<span class="feelslike">feels like 69°</span><span class="percent">0%</span></div>
+            <div class="right">icon</div>
+        </div>
+
+        <div class="fiveday">5 DAY FORECAST</div>
+
+        <div class="forecast">
+            <div class="monday">MONDAY
+                <div class="icon1">icon</div>
+                <div class="info1">info</div>
+            </div>
+            <div class="tuesday">TUESDAY
+                <div class="icon2">icon</div>
+                <div class="info2">info</div>
+            </div>
+            <div class="wednesday">WEDNESDAY
+                <div class="icon3">icon</div>
+                <div class="info3">info</div>
+            </div>
+            <div class="thursday">THURSDAY
+                <div class="icon4">icon</div>
+                <div class="info4">info</div>
+            </div>
+            <div class="friday">FRIDAY
+                <div class="icon5">icon</div>
+                <div class="info5">info</div>
+            </div>
+        </div>
+
+       <!--  <div class="results" id="app">
+            <h1>TIME</h1>
+            <p>{{time.day}}</p>
+            <p>{{time.date}}</p>
+            <p>{{time.hour_12}} : {{time.minute}} : {{time.seconds}} {{time.ampm}}</p>
+            <p>{{time.moom}}</p>
+
+            <h1>META</h1>
+            <p>{{city}}</p>
+
+            <p>{{location.zip}}</p>
+            <p>{{location.coord.lat}}</p>
+            <p>{{location.coord.lon}}</p>
+            <p>{{location.name}}</p>
+
+            <p>{{error}}</p>
+
+
+            <h1>CURRENT</h1>
+            <p>{{current.description_main}}</p>
+            <p>{{current.description_long}}</p>
+            <p>{{current.description_icon}}</p>
+
+            <p class="degree_symbol">{{current.temp.current}}</p>
+            <p class="degree_symbol">{{current.temp.high}}</p>
+            <p class="degree_symbol">{{current.temp.low}}</p>
+
+            <p>{{current.wind.speed}}</p>
+            <p class="degree_symbol">{{current.wind.degree}}</p>
+            <p>{{current.cloud_cover}}</p>
+
+            <p>{{current.rain}}</p>
+            <p>{{current.snow}}</p>
+
+            <p>{{current.sunrise}}</p>
+            <p>{{current.sunset}}</p>
+
+
+            <h1>HOURLY</h1>
+            <h4>Hour 1</h4>
+            <p>{{hourly[0].isDaytime ? 'Day' : 'Night' }}</p>
+            <p>{{hourly[0].number}}</p>
+            <p>{{hourly[0].shortForecast}}</p>
+            <p>{{hourly[0].startTime}}</p>
+            <p class="degree_symbol">{{hourly[0].temperature}}</p>
+            <p>{{hourly[0].emperatureTrend}}</p>
+            <p>{{hourly[0].windSpeed}}</p>
+            <p>{{hourly[0].windDirection}}</p>
+
+            <h1>FORECAST</h1>
+            <h4>Day 1</h4>
+            <p  class="degree_symbol">High - {{forecast[0].max_temp}}</p>
+            <p  class="degree_symbol">Low - {{forecast[0].min_temp}}</p>
+            <p>{{forecast[0].uv}}</p>
+            <p>{{forecast[0].weather.description}}</p>
+
+            <p>{{forecast[0].wind_spd}} mph</p>
+            <p>{{forecast[0].wind_cdir_full}}</p>
+            <p>{{forecast[0].wind_cdir}}</p>
+
+            <p>{{forecast[0].vis}}</p>
+
+            <p>{{forecast[0].pop}}</p>
+
+            <p>{{forecast[0].precip}}</p>
+
+            <p>{{forecast[0].snow}}</p>
+
+            <p>{{forecast[0].dewpt}}</p>
+            <p>{{forecast[0].pres}} mb</p>
+
+        </div> -->
+        <div id="map"></div>
+
+
+
+
+        <script src="/js/script.js" type="module"></script>
+    </body>
+</html>

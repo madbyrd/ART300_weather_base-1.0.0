@@ -1,0 +1,215 @@
+.degree_symbol:not(:empty)::after {
+    content: "°"
+}
+
+#zip{
+    font-family: helvetica neue;
+    font-style: regular;
+    font-size: .8em;
+}
+input{
+    height: 35px;
+    background-color: #3D4163;
+    width: 100%;
+}
+
+body{
+    background-image: linear-gradient(#EBFFE8, transparent);
+}
+
+.current{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin-bottom: 5em;
+}
+
+.today{
+    color: #3D4163;
+    font-size: 2.7em;
+    font-family: Alternate Gothic No2 D;
+    font-style: regular;
+    text-align: right;
+    padding-right: 3em;
+    padding-top: 1em;
+}
+
+.seattle{
+    color: #3D4163;
+    font-size: 2.7em;
+    font-family: Alternate Gothic No2 D;
+    font-style: regular;
+    text-align: left;
+    padding-left: 2.7em;
+    padding-top: 1em;
+}
+
+.temp{
+    display: grid;
+    background-color:#3D4163;
+    width: 35%; 
+    height: 20%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.left{
+    text-align: center;
+    font-family: helvetica neue;
+    font-style: bold;
+    font-size: 5em;
+    color: white;
+}
+
+
+.left .feelslike{  
+    font-style: light;
+    font-size: .2em;
+    display: block;
+}
+
+.left .percent{
+    font-style: light;
+    font-size: .3em;
+    display: block;
+}
+
+.right{
+    text-align: center;
+    font-family: Alternate Gothic No2 D;
+    font-style: regular;
+    font-size: 2.7em;
+    color: white;
+}
+
+.fiveday{
+    width: 85%;
+    background-color: #39A2AE;
+    margin: auto;
+    margin-top: 4em;
+    font-size: 2em;
+    font-family: Alternate Gothic No2 D;
+    color: #3D4163;
+    padding: 40px 40px 0px 40px;
+}
+
+.forecast{
+    width: 85%;
+    background-color:#39A2AE;
+    margin: auto; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 4em;
+    padding: 10px 40px 40px 40px;
+}
+
+.monday{
+    background-color: #39A2AE;
+    color: #EBFFE8;
+    font-family:Alternate Gothic No2 D;
+    font-style: regular; 
+    font-size: 1.5em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.icon1{
+    background-color: #3D4163;
+    font-size: 5em;
+}
+
+.info1{
+    background-color:#3D4163;
+    font-size: 5em; 
+}
+
+.tuesday{
+    background-color: #39A2AE;
+    color: #EBFFE8;
+    font-family:Alternate Gothic No2 D;
+    font-style: regular; 
+    font-size: 1.5em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.icon2{
+    background-color: #3D4163;
+    font-size: 5em;
+}
+
+.info2{
+    background-color:#3D4163;
+    font-size: 5em; 
+}
+
+.wednesday{
+    background-color: #39A2AE;
+    color: #EBFFE8;
+    font-family:Alternate Gothic No2 D;
+    font-style: regular; 
+    font-size: 1.5em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.icon3{
+    background-color: #3D4163;
+    font-size: 5em;
+}
+
+.info3{
+    background-color:#3D4163;
+    font-size: 5em; 
+}
+
+.thursday{
+    background-color: #39A2AE;
+    color: #EBFFE8;
+    font-family:Alternate Gothic No2 D;
+    font-style: regular; 
+    font-size: 1.5em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.icon4{
+    background-color: #3D4163;
+    font-size: 5em;
+}
+
+.info4{
+    background-color:#3D4163;
+    font-size: 5em; 
+}
+
+.friday{
+    background-color: #39A2AE;
+    color: #EBFFE8;
+    font-family:Alternate Gothic No2 D;
+    font-style: regular; 
+    font-size: 1.5em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.icon5{
+    background-color: #3D4163;
+    font-size: 5em;
+}
+
+.info5{
+    background-color:#3D4163;
+    font-size: 5em; 
+}
+
+.owm-legend-item{
+    display: none;
+}
+
+#map {
+	width: 600px;
+    height: 600px;
+}
