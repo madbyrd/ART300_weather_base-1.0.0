@@ -32,13 +32,14 @@ body{
     text-align: right;
     padding-right: 3em;
     padding-top: 1em;
+    text-transform: uppercase;
 }
 
 .seattle{
     color: #3D4163;
     font-size: 2.7em;
     font-family: Alternate Gothic No2 D;
-    font-style: regular;
+    text-transform: uppercase;
     text-align: left;
     padding-left: 2.7em;
     padding-top: 1em;
@@ -76,12 +77,18 @@ body{
     display: block;
 }
 
-.right{
+.icon01d{
     text-align: center;
     font-family: Alternate Gothic No2 D;
     font-style: regular;
     font-size: 2.7em;
     color: white;
+    background-image: url("/01d.png");
+    background-repeat: none;
+    background-size: contain;
+    background-position: center;
+    width: 180px;
+    height: 180px;
 }
 
 .fiveday{
@@ -102,7 +109,8 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 4em;
-    padding: 10px 40px 40px 40px;
+    padding: 10px 40px 0px 40px;
+    text-transform: uppercase;
 }
 
 .monday{
@@ -123,6 +131,7 @@ body{
 .info1{
     background-color:#3D4163;
     font-size: 5em; 
+    text-align: center;
 }
 
 .tuesday{
@@ -143,6 +152,7 @@ body{
 .info2{
     background-color:#3D4163;
     font-size: 5em; 
+    text-align: center;
 }
 
 .wednesday{
@@ -163,6 +173,7 @@ body{
 .info3{
     background-color:#3D4163;
     font-size: 5em; 
+    text-align: center;
 }
 
 .thursday{
@@ -183,6 +194,7 @@ body{
 .info4{
     background-color:#3D4163;
     font-size: 5em; 
+    text-align: center;
 }
 
 .friday{
@@ -203,13 +215,359 @@ body{
 .info5{
     background-color:#3D4163;
     font-size: 5em; 
+    text-align: center;
+}
+
+.forecastinfo{
+    width: 85%;
+    background-color:#39A2AE;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 4em;
+    padding: 0px 40px 0px 40px;
+    color: #EBFFE8;
+    font-family:Alternate Gothic No2 D;
+}
+
+.precipinfo{
+    width: 85%;
+    background-color:#39A2AE;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 4em;
+    padding: 0px 40px 40px 40px;
+    color: #EBFFE8;
+    font-family:Alternate Gothic No2 D;
+}
+
+.precip1{
+    background-color:#3D4163;
+    font-size: 3em; 
+    text-align: center;
+}
+
+.precip2{
+    background-color:#3D4163;
+    font-size: 3em; 
+    text-align: center;
+}
+
+.precip3{
+    background-color:#3D4163;
+    font-size: 3em; 
+    text-align: center;
+}
+
+.precip4{
+    background-color:#3D4163;
+    font-size: 3em; 
+    text-align: center;
+}
+
+.precip5{
+    background-color:#3D4163;
+    font-size: 3em; 
+    text-align: center;
+}
+
+.radar{
+    display: grid;
+    grid-template-columns: 2fr .6fr;
+    grid-column-gap: 2em;
+    width: calc(85vw + 80px);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.radarmaps{
+    color: #EBFFE8;
+    font-size: 1.5em;
+    font-family:Alternate Gothic No2 D;
+    font-style: regular;
+    display: grid;
+    background-color: #3D4163;
+    padding: 15px 20px 15px 20px;
+    margin-bottom: 10px;
+}
+
+.radarmaps h4{
+    margin: 0;
+}
+
+#map {
+    width: 100%;
+    height: 200px;
+}
+
+.rightnow{
+    color: #EBFFE8;
+    font-size: 1.5em;
+    font-family:Alternate Gothic No2 D;
+    font-style: regular;
+    display: grid;
+    background-color: #3D4163;
+    padding: 15px 20px 15px 20px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.rightnow h4{
+    margin: 0;
+}
+
+.values{
+    display: grid;
+    grid-template-columns: .6fr 1.5fr;
+}
+
+.uvindex{
+    color: #39A2AE;
+    font-size: 1em;
+}
+
+.uvinfo{
+    font-size: .75em;
+    color: #EBFFE8;
+}
+
+.dewpoint{
+    color: #39A2AE;
+    font-size: 1em;
+}
+
+.dewpointinfo{
+    font-size: .75em;
+    color: #EBFFE8;
+}
+
+.humidity{
+    color: #39A2AE;
+    font-size: 1em;
+}
+
+.humidityinfo{
+    font-size: .75em;
+    color: #EBFFE8;
+}
+
+.visibility{
+    color: #39A2AE;
+}
+
+.visibilityinfo{
+    font-size: .75em;
+    color: #EBFFE8;
+}
+
+.wind{
+    color: #39A2AE;
+    font-size: 1em;
+}
+
+.windinfo{
+    font-size: .75em;
+    color: #EBFFE8;
+}
+
+.sunandmoon{
+    background-color: #3D4163;
+    color: #EBFFE8;
+    font-family: Alternate Gothic No2 D;
+    width: 89%;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.5em;
+}
+
+.sunandmooninfo{
+    display: grid;
+    font-family: Alternate Gothic No2 D;
+    font-size: 3em;
+    color: #EBFFE8;
+    background-color: #3D4163;
+    width: 89%;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sunicons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2em;
+    width: 70%;
+    margin: auto;
+    height: 120px;
+    width: 300px;
+}
+
+.sunriseicon{
+    background-image: url("/sunrise.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+}
+
+.sunseticon{
+    background-image: url("/sunset.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+}
+
+.moonicons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2em;
+    width: 70%;
+    margin: auto;
+    height: 120px;
+    width: 300px;
+}
+
+.moonriseicon{
+    background-image: url("/moonrise.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+}
+
+.moonseticon{
+    background-image: url("/moonset.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+}
+
+.sunandmoonvalues{
+    display: grid;
+    font-family: Alternate Gothic No2 D;
+    font-size: 2em;
+    color: #EBFFE8;
+    background-color: #3D4163;
+    width: 89%;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.sunvalues{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    margin: auto;
+}
+
+.moonvalues{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    margin: auto;
+}
+
+.icon{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.icon-01d{
+    background-image: url("/01d.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}
+
+.icon-02d{
+    background-image: url("/02d.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}
+
+.icon-03d{
+    background-image: url("/03d.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}
+
+.icon-03d{
+    background-image: url("/04d.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}
+
+.icon-09d{
+    background-image: url("/09d.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}
+
+.icon-10d{
+    background-image: url("/10d.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}
+
+.icon-11d{
+    background-image: url("/11d.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}
+
+.icon-13d{
+    background-image: url("/13d.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}
+
+.icon-50d{
+    background-image: url("/50d.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}
+
+.icon-2n{
+    background-image: url("/2n.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
 }
 
 .owm-legend-item{
     display: none;
 }
 
-#map {
-	width: 600px;
-    height: 600px;
-}
