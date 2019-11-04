@@ -27,44 +27,121 @@
 
     <body>
 
+        <div class="results" id="app">
+            <input placeholder="Enter Your ZIP Code" v-on:input="zip_trigger" name="name" id="zip" />
+            <p id="zip_display"></p>
 
+            <div class="current">
+                <div class="seattle">{{location.name}}</div>
+                <div class="today">{{time.day}} {{time.date}}</div>
+            </div>
 
-        <input placeholder="search: zip code" name="name" id="zip" />
-        <p id="zip_display"></p>
+            <div class="temp">
+                <div class="left">{{current.temp.current}}°F<span class="feelslike">feels like {{current.temp.feelslike}}°</span><span class="percent">0%</span></div>
+                <div class="icon">
+                    <div v-bind:class="'icon-'+forecast[0].description_icon"></div>
+                </div>
+            </div>
 
-        <div class="current">
-            <div class="seattle">SEATTLE, WASHINGTON</div>
-            <div class="today">TODAY'S DETAILS</div>
-        </div>
+            <div class="fiveday">5 DAY FORECAST</div>
 
-        <div class="temp">
-            <div class="left">71°<span class="feelslike">feels like 69°</span><span class="percent">0%</span></div>
-            <div class="right">icon</div>
-        </div>
+            <div class="forecast">
+                <div class="monday">{{forecast[0].weekday}}
+                    <div class="icon1">
+                        <div v-bind:class="'icon-'+forecast[0].description_icon"></div>
+                    </div>
+                </div>
+                <div class="tuesday">{{forecast[1].weekday}}
+                    <div class="icon2">
+                        <div v-bind:class="'icon-'+forecast[1].description_icon"></div>
+                    </div>
+                </div>
+                <div class="wednesday">{{forecast[2].weekday}}
+                    <div class="icon3">
+                        <div v-bind:class="'icon-'+forecast[2].description_icon"></div>
+                    </div>
+                </div>
+                <div class="thursday">{{forecast[3].weekday}}
+                    <div class="icon4">
+                        <div v-bind:class="'icon-'+forecast[3].description_icon"></div>
+                    </div>
+                </div>
+                <div class="friday">{{forecast[4].weekday}}
+                    <div class="icon5">
+                        <div v-bind:class="'icon-'+forecast[4].description_icon"></div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="fiveday">5 DAY FORECAST</div>
-
-        <div class="forecast">
-            <div class="monday">MONDAY
-                <div class="icon1">icon</div>
+            <div class="forecastinfo">
                 <div class="info1">info</div>
-            </div>
-            <div class="tuesday">TUESDAY
-                <div class="icon2">icon</div>
                 <div class="info2">info</div>
-            </div>
-            <div class="wednesday">WEDNESDAY
-                <div class="icon3">icon</div>
                 <div class="info3">info</div>
-            </div>
-            <div class="thursday">THURSDAY
-                <div class="icon4">icon</div>
                 <div class="info4">info</div>
-            </div>
-            <div class="friday">FRIDAY
-                <div class="icon5">icon</div>
                 <div class="info5">info</div>
             </div>
+
+            <div class="precipinfo">
+                <div class="precip1">{{forecast[0].precip}}%</div>
+                <div class="precip2">{{forecast[1].precip}}%</div>
+                <div class="precip3">{{forecast[2].precip}}%</div>
+                <div class="precip4">{{forecast[3].precip}}%</div>
+                <div class="precip5">{{forecast[4].precip}}%</div>
+            </div>
+
+            <div class="radar">
+                <div class="radarmaps">
+                    <h4>RADAR/MAPS</h4>
+                    <div id="map"></div>
+                </div>
+                <div class="rightnow">
+                    <h4>RIGHT NOW</h4>
+                    <div class="values">
+                        <div class="uvindex">UV INDEX:</div>
+                        <div class="uvinfo"> {{current.uv}}</div>
+                        <div class="humidity">HUMIDITY:</div>
+                        <div class="humidityinfo">{{current.humidity}}%</div>
+                        <div class="dewpoint">DEW POINT:</div>
+                        <div class="dewpointinfo">{{forecast[0].dewpt}}°</div>
+                        <div class="visibility">VISIBILITY:</div><span class="visibilityinfo">{{forecast[0].vis}} mi</span>
+                        <div class="wind">WIND:</div>
+                        <div class="windinfo">{{forecast[0].wind_cdir}} {{current.wind.speed}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sunandmoon">
+                <div class="sun">SUNRISE/SUNSET</div>
+                <div class="moon">MOONRISE/MOONSET</div>
+            </div>
+            <div class="sunandmooninfo">
+                <div class="sunicons">
+                    <div class="sunriseicon"></div>
+                    <div class="sunseticon"></div>
+                </div>
+                <div class="moonicons">
+                    <div class="moonriseicon"></div>
+                    <div class="moonseticon"></div>
+                </div>
+            </div>
+            <div class="sunandmoonvalues">
+                <div class="sunvalues">
+                    <div class="sunrise">{{current.sunrise}}</div>
+                    <div class="sunset">{{current.sunset}}</div>
+                </div>
+                <div class="moonvalues">
+                    <div class="moonrise">11:52pm</div>
+                    <div class="moonset">2:08pm</div>
+                </div>
+            </div>
+            <div class="icon-01d"></div>
+            <div class="icon-02d"></div>
+            <div class="icon-03d"></div>
+            <div class="icon-04d"></div>
+            <div class="icon-09d"></div>
+            <div class="icon-10d"></div>
+            <div class="icon-11d"></div>
+            <div class="icon-13d"></div>
+            <div class="icon-50d"></div>
         </div>
 
        <!--  <div class="results" id="app">
@@ -139,7 +216,7 @@
             <p>{{forecast[0].pres}} mb</p>
 
         </div> -->
-        <div id="map"></div>
+        
 
 
 
